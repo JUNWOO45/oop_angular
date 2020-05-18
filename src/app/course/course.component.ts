@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CourseService } from '../course.service';
 
 
 export interface Course {
@@ -17,19 +18,11 @@ export class CourseComponent implements OnInit {
 
   public color: string;
 
-  constructor() { 
+  constructor(private courseService: CourseService) { 
   }
 
   ngOnInit() {
-    console.log('this.course : ', this.course);
-
-    if(this.course.type === 'math') {
-      this.color = 'red';
-    } else if(this.course.type === 'english') {
-      this.color = 'blue';
-    } else if(this.course.type === 'history') {
-      this.color = 'yellow';
-    }
+    this.color = this.courseService.getColor(this.course.type);
   }
 
 }
