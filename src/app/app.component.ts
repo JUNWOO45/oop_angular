@@ -27,7 +27,27 @@ export class AppComponent {
       name: '로마역사', 
       type: 'history',
       price: 4700
-    }
+    },
+    {
+      name: '자바스크립트 강좌',
+      type: 'javascript',
+      price: 50000
+    },
+    {
+      name: '근현대사', 
+      type: 'history',
+      price: 8700
+    },
+    {
+      name: 'CSS배워봐요.', 
+      type: 'css',
+      price: 5000
+    },
+    {
+      name: '덧셈뺄셈곱셈나눗셈', 
+      type: 'math',
+      price: 2300
+    },
   ];
 
   constructor() {
