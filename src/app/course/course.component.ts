@@ -21,7 +21,9 @@ export class CourseComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('this.course : ', this.course);
+    // ngOnInit is not a pure function.
+    // If more logic goes into ngOnInit, we won't be able to test dependent logic separately!
+    // And if the logic is more complex than coloring, the component won't be representational anymore.
 
     if(this.course.type === 'math') {
       this.color = 'red';
